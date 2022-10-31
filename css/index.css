@@ -1,0 +1,253 @@
+@font-face {
+  font-family: English;
+  src: url(../res/fonts/english/English.ttf);
+  src: url(../res/fonts/english/English.woff);
+  src: url(../res/fonts/english/English.woff2);
+}
+
+@font-face {
+  font-family: Barkelia;
+  src: url(../res/fonts/barkelia/Barkelia.ttf);
+}
+@font-face {
+  font-family: Cafeta;
+  src: url(../res/fonts/cafeta/Cafeta.ttf);
+  src: url(../res/fonts/cafeta/Cafeta.woff);
+  src: url(../res/fonts/cafeta/Cafeta.woff2);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../res/fonts/lato/Lato.woff2);
+}
+
+::-webkit-scrollbar {
+  width: 0.8vw;
+  background: #00000000;
+  opacity: 0.3;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+  border-radius: 10px;
+  opacity: 0.3;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9a877270;
+  opacity: 0.3;
+  border-radius: 10px;
+  margin: 2px;
+  transition: all 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+  opacity: 0.3;
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+h1.logo {
+  position: relative;
+  width: 210px;
+  margin: 0.3em 0 0.3em 12px;
+  text-align: right;
+}
+h1.logo > span.ballet, .ballet1 {
+  font-family: English;
+  font-size: 72px;
+  font-weight: normal;
+  letter-spacing: -3px;
+  color: #d12329; /* red */
+  z-index: 2;
+  left: 18px;
+
+  text-shadow: 0 0 1px white;
+
+  position: absolute;
+  top: 10px;
+  left: 125px;
+}
+.ballet1 {
+  font-weight: bold;
+  color: white;
+}
+h1.logo > span.adult,
+h1.logo > span.community {
+  font-family: Cafeta;
+  font-size: 56px;
+  font-weight: normal;
+  color: black;
+  z-index: 1;
+
+
+  position: relative;
+}
+h1.logo > span.adult {
+  left: -20px;
+  top: -7px;
+}
+h1.logo > span.community {
+  top: 0px;
+}
+
+div.centre {
+  align-self: center;
+}
+
+div.floatingPara {
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 2px #aeaeae;
+}
+
+div.logoHolder {
+  width: 300px;
+}
+
+div.textHolder {
+  font-family: Lato;
+  max-width: 75%
+}
+
+div.textHolder > p {
+  margin: 1em 2em;
+}
+.bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.bg1 {
+  min-height: 100%;
+  width: 100%;
+  background-image: url(../res/img/bg/ballet_1.webp);
+
+  min-height: 170%;
+  justify-content: space-around;  
+}
+.bg2 {
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(../res/img/bg/polunin_2.webp);
+  background-position: top;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+}
+
+div.section > h1.sectionTitle {
+  font-family: Barkelia;
+  display: inline-block;
+  font-size: 4em;
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+div.section.schedule > p {
+  position: relative;
+  display: inline-block;
+  font-family: Barkelia;
+
+  margin-left: 1em;
+  font-size: 2em;
+}
+div.section.schedule > select {
+  font-family: Cafeta;
+  display: inline-block;
+
+  margin-left: 1em;
+  font-size: 2em;
+  height: 2em;
+  padding: 0;
+}
+
+div.section.schedule > p.currency {
+  align-self: right;
+  right: 0;
+  text-align: left;
+  font-family: Lato;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+table.schedule {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  border-spacing: 5px;
+  font-family: Lato;
+}
+
+table.schedule tr th:first-child,
+table.schedule tr td:first-child {
+  padding-left: 15px;
+}
+table.schedule tr.newSet td {
+  padding-bottom: 20px;
+}
+table.schedule th.teacher {
+  width: 100%;
+  height: 2em;
+  border-radius: 15px;
+  text-align: center;
+  font-family: Lato;
+  font-size: 2em;
+  background-color: pink;
+  color: white;
+  text-shadow: 0 0 10px #9e4d5c;
+}
+table.schedule th.day {
+  width: 100%;
+  text-align: left;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+table.schedule th.day > * {
+}
+
+table.schedule td.time {
+}
+table.schedule td.studio {
+  cursor: pointer;
+}
+table.schedule td.level {
+}
+table.schedule td.cost {
+
+}
+
+a, a:visited, a:hover, a:active {
+  color: blue;
+}
+
+.noBold {
+  font-weight: normal;
+}
