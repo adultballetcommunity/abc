@@ -118,6 +118,47 @@ const schedule = {
 	"05.11.22"
       ]
     },
+  ],
+  "Vadym": [
+    { // Tuesdays
+      day: 2,
+      studio: "Dance102",
+      classType: "B",
+      cost: 20,
+      time: {
+	start: 1000,
+	end: 1130
+      },
+      dates: [
+	"01.11.22"
+      ]
+    },
+    { // Thursdays
+      day: 4,
+      studio: "Dance102",
+      classType: "B",
+      cost: 20,
+      time: {
+	start: 1000,
+	end: 1130
+      },
+      dates: [
+	"03.11.22"
+      ]
+    },
+    { // Thursdays
+      day: 4,
+      studio: "Dance102",
+      classType: "Workshop",
+      cost: 20,
+      time: {
+	start: 1145,
+	end: 1245
+      },
+      dates: [
+	"03.11.22"
+      ]
+    },
   ]
 };
 
