@@ -67,14 +67,25 @@ const arrayOfStrEq = (arr1, arr2) => {
   return true;
 };
 
-// Converts 24hr time to am/pm time
+// Converts 24hr time to am/pm time (hhmm to (h)h:mm [am|pm])
 const timeConvert = (time) => {
   if (!Number.isInteger(+time) || time < 0 || time > 2359) {
     console.error("A non-24hr time was attemped conversion:", time);
     return;
   }
   time = (typeof time === "string") ? time : time.toString();
-  const [hr, min, m] = [time.slice(0,2) % 12, time.slice(2), (time.slice(0,2) < 12) ? "am" : "pm"];
+
+  // Edge Case for "00:00am"
+  if (time === "0000") {
+    return "00:00am";
+  }
+
+  const hrs_24 = time.slice(0,2);
+  const [hr, min, m] = [
+    (hrs_24 === "12") ? 12 : hrs_24 % 12,
+    time.slice(2),
+    (hrs_24 < 12) ? "am" : "pm"
+  ];
   const newTime = `${hr}:${min}${m}`;
   return newTime;
 };
