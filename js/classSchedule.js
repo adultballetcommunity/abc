@@ -108,7 +108,7 @@ const schedule = {
     { // Saturdays
       day: 6,
       studio: "Evolution",
-      classType: "Beg/Int",
+      classType: "B/E",
       cost: 22,
       time: {
 	start: 1130,
@@ -116,6 +116,19 @@ const schedule = {
       },
       dates: [
 	"05.11.22"
+      ]
+    },
+    { // Saturdays
+      day: 6,
+      studio: "Evolution",
+      classType: "Intermediate",
+      cost: 22,
+      time: {
+	start: 1300,
+	end: 1430
+      },
+      dates: [
+	"19.11.22"
       ]
     },
   ],
