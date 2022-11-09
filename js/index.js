@@ -94,6 +94,22 @@ const writeTimeRange = (timeRange) => {
   return `${timeConvert(timeRange.start)} - ${timeConvert(timeRange.end)}`;
 };
 
+const recursiveGet = (obj, attrs) => {
+  return (attrs.length === 1) ? obj[attrs[0]] : recursiveGet(obj[attrs[0]], attrs.slice(1));
+};
+
+// Inserts an item into an array in ascending order of the given attribute
+// N.B. relies on the array already being in order
+const orderedInsert = (arr, item, attrs) => {
+  for (let i=0; i<arr.length; i++) {
+    if (recursiveGet(item, attrs) < recursiveGet(arr[i], attrs)) {
+      arr.splice(i, 0, item);
+      return;
+    }
+  }
+  arr.push(item);
+};
+
 const createScheduleDay = () => {
   const table = c("table", {class: "schedule"});
 
@@ -105,10 +121,12 @@ const createScheduleDay = () => {
   for (const [teacher, classes] of Object.entries(schedule)) {
     classes.forEach(classe => {
       classe.teacher = teacher;
-      scheduleDay[days[classe.day]].push(classe);
+      orderedInsert(scheduleDay[days[classe.day]], classe, ["time", "start"]);
+//      scheduleDay[days[classe.day]].push(classe);
     });
   }
 
+  // Puts Monday First
   const daysOrder = days.slice(1);
   daysOrder.push("Sunday");
   daysOrder.forEach(day => {
