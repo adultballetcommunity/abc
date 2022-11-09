@@ -172,6 +172,34 @@ const schedule = {
 	"03.11.22"
       ]
     },
+  ],
+  "Elliot": [
+    { // Wednesdays
+      day: 3,
+      studio: "Evolution",
+      classType: "B/E",
+      cost: "25 (cash only)",
+      time: {
+	start: 1000,
+	end: 1130
+      },
+      dates: [
+	"16.11.22"
+      ]
+    },
+    { // Fridays
+      day: 5,
+      studio: "Evolution",
+      classType: "B",
+      cost: "25 (cash only)",
+      time: {
+	start: 1830,
+	end: 2000
+      },
+      dates: [
+	"11.11.22"
+      ]
+    }
   ]
 };
 
