@@ -226,6 +226,11 @@ const studios = {
     address: "1/15 Falcon St, Crows Nest",
     mapLink: "https://goo.gl/maps/88ShHQQw6Bd3R2LM7",
     phone: "0433 124 068"
+  },
+  "L.I.K.E.": {
+    address: "6/7 Herbert St, St Leonards",
+    mapLink: "https://goo.gl/maps/BDUu8bPE9VRmATW9A",
+    phone: "(02) 9436 4599"
   }
 };
 
