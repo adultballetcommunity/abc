@@ -108,7 +108,7 @@ const schedule = {
     { // Saturdays
       day: 6,
       studio: "Evolution",
-      classType: "B/E",
+      classType: "B",
       cost: 22,
       time: {
 	start: 1130,
@@ -121,7 +121,7 @@ const schedule = {
     { // Saturdays
       day: 6,
       studio: "Evolution",
-      classType: "Intermediate",
+      classType: "E/I",
       cost: 22,
       time: {
 	start: 1300,
@@ -133,6 +133,19 @@ const schedule = {
     },
   ],
   "Vadym": [
+    { // Mondays
+      day: 1,
+      studio: "L.I.K.E.",
+      classType: "B",
+      cost: 20,
+      time: {
+	start: 1000,
+	end: 1130
+      },
+      dates: [
+	"01.11.22"
+      ]
+    },
     { // Tuesdays
       day: 2,
       studio: "Dance102",
